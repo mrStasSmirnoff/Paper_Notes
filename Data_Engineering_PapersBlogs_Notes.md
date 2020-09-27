@@ -1,6 +1,6 @@
 ## Medium:
 	
-#### Data pipelines, Luigi, Airflow: everything you need to know*
+#### Data pipelines, Luigi, Airflow: everything you need to know
 
 - Link : https://towardsdatascience.com/data-pipelines-luigi-airflow-everything-you-need-to-know-18dc741449b7
 - Description: Detailed comparision of two Workflow Management Systems (WMS) Apache Airflow and Luigi.
@@ -28,7 +28,7 @@
 	
 - Link: https://tech.trivago.com/2018/12/03/teardown-rebuild-migrating-from-hive-to-pyspark/
 - Description: Migration of bidding platform from Hive to Spark.
-- Technologies: Apache Hadoop, Apache Hive (HQL), Apache Spark (PySpark), Unit-tests
+- Technologies: Apache Hadoop, Apache Hive (HQL), Apache Spark (PySpark), Unit-tests.
 - More: The first version of the value-per-click (VPC) algorithm consisted of a data-pipeline that crunched data to update our VPC probability distributions by reading/writing tabular data into the Hadoop Distributed File System (HDFS) with Apache Hive, an SQL dialect that translates SQL into efficient MapReduce jobs. This worked well as long as we stuck to a simple Bayesian model to calculate the VPC and simple heuristics in the bidding layer. However, Hive was not a stable option to develop the bidding system we dreamed of during our sprint plannings, because of the lack of expressiveness of Hive’s SQL dialect, Unit-Tests etc. We tried different ways to write unit tests for Hive code with little success: Unit-tests on most existing frameworks must be written in Java (was not an option). The solution is - Spark with it amount of high-functional APIs to Scala, Python, R, and Java. Eventually the combination of Python+Spark was chosen.
 
 
