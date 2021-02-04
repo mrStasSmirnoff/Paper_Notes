@@ -12,6 +12,15 @@
     For new accommodations *Cold Start Embeddings* authors find 3 geographically closest listings that do have embeddings, and are of the same listing type and price range as the new listing, and calculate their mean vector. The offline evaluation is done by taking the most recently clicked listing and the listing candidates that need to be ranked, which contain the listing that the user eventually booked. By calculating cosine similarities between embeddings of the clicked listing and the candidate listings we can rank the candidates and observe the rank position of the booked listing. For the *Search Ranking* where the aim is to show to the guest more listings that are similar to the ones we think they liked since starting the search session and fewer listings similar to the ones we think they did not like. To achieve this, for each user authors collected and maintain in real-time (using Kafka) two sets of short-term history events: **Hc** - set of listing ids that user clicked in last 2 weeks and **Hs** - set of listing ids that user skipped in last 2 weeks, where we define skipped listings as ones that were ranked high but skipped by a user in favor of a click on a lower positioned listing. These two similarity measures were next introduced as an additional signal that our Search Ranking Machine Learning model considers when ranking candidate listings.
 
 
+#### Learning Market Dynamics for Optimal Pricing (AirBnb)
+
+- Link: https://medium.com/airbnb-engineering/learning-market-dynamics-for-optimal-pricing-97cffbcc53e3
+- Video: https://www.youtube.com/watch?v=HjYudaD6Feg&ab_channel=GlobalBigDataConference
+
+- Description: 
+
+
+
 #### How does Spotify know you so well?
 
 - Link: https://medium.com/s/story/spotifys-discover-weekly-how-machine-learning-finds-your-new-music-19a41ab76efe
