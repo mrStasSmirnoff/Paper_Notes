@@ -17,7 +17,8 @@
 - Link: https://medium.com/airbnb-engineering/learning-market-dynamics-for-optimal-pricing-97cffbcc53e3
 - Video: https://www.youtube.com/watch?v=HjYudaD6Feg&ab_channel=GlobalBigDataConference
 
-- Description: 
+- Description: The lead time for a booking refers to the time between the date of booking and the trip check-in date. The corresponding distribution of bookings over lead time is the booking lead time distribution. Learning the booking lead time distribution helps power our pricing system. Airbnb launched Smart Pricing to help hosts set optimal prices and maximize earnings. These tools take into account factors like demand, supply and individual listing properties in order to make price suggestions for all check-in dates on the calendar. By learning the arrival process for every check-in date and location, Smart Pricing accounts for this “early demand” and generates a pricing policy that allows hosts to optimally update their prices as we approach check-in. The goal is to learn and estimate "f" (the density of the distribution above), for each listing "i", check-in date "j", and every lead day "t" heading into check-in.
+
 
 
 
@@ -38,3 +39,17 @@
 - Description: The idea is to adjust the main images of hotels to reflect the user intent coming from SEM ads containing spa concepts (concept-based main images)
 - Technologies: AWS stack for pipelines, RNN, CNN with transfer learning. 
 - More: Automated (with CV) image labeling of Trivago 100+ million active images for Spa & Wellness. For training, some public data has been used along with existing handpicked image tags from our trivago hoteliers. Questionnaires have been prepared based on Amazon Mechanical Turk to align the images semantically. The resulting dataset had 2,000 images for each of the categories of "Sauna", "Pool", "Gym", "Yoga", "Hot-tub" and "Massage". Five different CNN architectures (InceptionV3, VGG16, Xception, ResNet50, InceptionResnetV2) were evaluated with VGG16 chosen as the final model. Precision was used as an evaluation metric (to min False Positives). To deal with the images that had to be negated (out all classes that are beyond this concept) two additional (unbalanced) classes were introduced "Bedroom" and "Non-Spa". An average  Precision and Recall of ~85% and ~89% for the individual Spa & Wellness classes.
+
+
+
+## Uber Engineering:
+
+#### Forecasting at Uber: An Introduction
+
+- Link: https://eng.uber.com/forecasting-introduction/
+- Description: An intro to the Forecasting approach at Uber.
+- Techinologies: statistical models (ARIMA), Regressions, Boostings, RNNs, Omphalos (a parallel, language-extensible backtesting framework)
+- More: Uber leverages forecasting for several use cases, including "Marketplace Forecasting" (Spatio - temporal forecast), "Hardware capacity planning",
+"Marketing" (to understand the marginal effectiveness of different media channels). Quantitative forecasting approaches in Uber can be grouped as follows: model-based or causal classical, statistical methods, and machine learning approaches. Model-based forecasting is the strongest choice when the underlying mechanism, or physics, of the problem is known, and as such it is the right choice in many scientific and engineering situations at Uber.
+When the underlying mechanisms are not known or are too complicated it is usually better to apply a simple statistical model. Popular classical methods that belong to this category include ARIMA (autoregressive integrated moving average), exponential smoothing methods, such as Holt-Winters, and the Theta method, etc. Additionally, machine learning approaches are utilized as: including quantile regression forests (QRF), the cousins of the well-known random forest. Recurrent neural networks (RNNs) have also been shown to be very useful if sufficient data, especially exogenous regressors, are available. In practice. classical statistical algorithms tend to be much quicker and easier-to-use. Two major approaches to test forecasting models are "the sliding window" approach and "the expanding window" approach. Often best, to marry the two methods: start with the expanding window method and, when the window grows sufficiently large, switch to the sliding window method. For the evaluation besides of the common metrics like absolute errors and percentage errors, the comparison of the model performance against the naive forecast is also used. In the case of a non-seasonal series, a naive forecast is when the last value is assumed to be equal to the next value. "Prediction intervals" are also very important, in fact they are given the same importance as the point forecast itself and should always be included in your forecasts. Prediction intervals are typically a function of how much data we have, how much variation is in this data, how far out we are forecasting, and which forecasting approach is used.
+
